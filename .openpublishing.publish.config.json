@@ -1,32 +1,29 @@
 {
   "build_entry_point": "docs",
   "need_generate_pdf": false,
-  "need_preview_pull_request": true,
   "need_generate_intellisense": false,
   "docsets_to_publish": [
     {
-      "docset_name": "azure-cli-docs",
+      "docset_name": "e2eprod-azure-cli-docs",
       "build_source_folder": ".",
-      "build_output_subfolder": "cli/azure",
+      "build_output_subfolder": "e2eprod-azure-cli-docs",
       "locale": "en-us",
-      "version": 0,
+      "monikers": [],
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
-        "RestApi": "Content",
-        "AzurePyCli": "Content"
+        "RestApi": "Content"
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
-      "customized_template_paths": [
-        "azurecli/azurecli"
-      ]
+      "version": 0
     }
   ],
   "notification_subscribers": [],
   "branches_to_filter": [],
   "skip_source_output_uploading": false,
+  "need_preview_pull_request": true,
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
