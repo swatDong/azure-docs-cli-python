@@ -1,42 +1,24 @@
 commandList:
-- name: az vmss disk attach
-  description: ''
-  href: disk#attach
-- name: az vmss disk detach
-  description: ''
-  href: disk#detach
-htmlId: disk
+- name: az cognitiveservices account keys list
+  description: List the keys of a cognitive services account.
+  href: keys#list
+- name: az cognitiveservices account keys regenerate
+  description: Regenerate the keys of a cognitive services account.
+  href: keys#regenerate
+htmlId: keys
 examples: []
-source:
-  remote:
-    path: src/command_modules/azure-cli-vm/azure/cli/command_modules/vm/_help.py
-    branch: master
-    repo: https://github.com/Azure/azure-cli.git
 children:
 - commandList: []
-  htmlId: attach
+  htmlId: list
   examples: []
   parameters:
   - name: --name -n
     isRequired: True
-    summary: Scale set name. You can configure the default using az configure --defaults vmss=<name>.
+    summary: Cognitive service account name.
     description: ''
   - name: --resource-group -g
     isRequired: True
     summary: Name of resource group. You can configure the default group using az configure --defaults group=<name>.
-    description: ''
-  - name: --size-gb -z
-    isRequired: True
-    summary: Size in GB.
-    description: ''
-  - name: --caching
-    isRequired: False
-    summary: Disk caching policy.
-    description: ''
-    parameterValueGroup: None, ReadOnly, ReadWrite
-  - name: --lun
-    isRequired: False
-    summary: 0-based logical unit number (LUN). Max value depends on the Virtual Machine instance size.
     description: ''
   - name: --debug
     isRequired: False
@@ -60,28 +42,24 @@ children:
     isRequired: False
     summary: Increase logging verbosity. Use --debug for full debug logs.
     description: ''
-  source:
-    remote:
-      path: src/command_modules/azure-cli-vm/azure/cli/command_modules/vm/_help.py
-      branch: master
-      repo: https://github.com/Azure/azure-cli.git
   children: []
-  uid: az_vmss_disk_attach
-  name: az vmss disk attach
+  uid: az_cognitiveservices_account_keys_list
+  name: az cognitiveservices account keys list
   description: ''
-  summary: ''
+  summary: List the keys of a cognitive services account.
   Metadata: {}
 - commandList: []
-  htmlId: detach
+  htmlId: regenerate
   examples: []
   parameters:
-  - name: --lun
+  - name: --key-name
     isRequired: True
-    summary: 0-based logical unit number (LUN). Max value depends on the Virtual Machine instance size.
+    summary: Key name to generate.
     description: ''
+    parameterValueGroup: key1, key2
   - name: --name -n
     isRequired: True
-    summary: Scale set name. You can configure the default using az configure --defaults vmss=<name>.
+    summary: Cognitive service account name.
     description: ''
   - name: --resource-group -g
     isRequired: True
@@ -109,25 +87,14 @@ children:
     isRequired: False
     summary: Increase logging verbosity. Use --debug for full debug logs.
     description: ''
-  source:
-    remote:
-      path: src/command_modules/azure-cli-vm/azure/cli/command_modules/vm/_help.py
-      branch: master
-      repo: https://github.com/Azure/azure-cli.git
   children: []
-  uid: az_vmss_disk_detach
-  name: az vmss disk detach
+  uid: az_cognitiveservices_account_keys_regenerate
+  name: az cognitiveservices account keys regenerate
   description: ''
-  summary: ''
+  summary: Regenerate the keys of a cognitive services account.
   Metadata: {}
-uid: az_vmss_disk
-name: 'VMSS disks - az vmss disk'
+uid: az_cognitiveservices_account_keys
+name: az cognitiveservices account keys
 description: ''
-summary: Manage the managed data disks associated with a virtual machine scale set.
-Metadata:
-  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/master/
-  doc_source_url_path: src/command_modules/azure-cli-vm/azure/cli/command_modules/vm/_help.py
-  original_content_git_url: https://github.com/Azure/azure-cli/blob/master/src/command_modules/azure-cli-vm/azure/cli/command_modules/vm/_help.py
-  gitcommit: https://github.com/Azure/azure-cli/blob/c4b065f94c361673e95e74addf22ae8b509a1758/src/command_modules/azure-cli-vm/azure/cli/command_modules/vm/_help.py
-  updated_at: 5/3/2017 12:11:17 AM
-  ms.date: 5/3/2017
+summary: Manage the keys of a cognitive services account.
+Metadata: {}
