@@ -38,10 +38,6 @@ commandList:
 - name: az configure
   description: Configure Azure CLI 2.0 Preview or view your configuration. The command is interactive, so just type az configure and respond to the prompts.
   href: '#configure'
-- name: az container
-  description: Set up automated builds and deployments for multi-container Docker applications.
-  href: container
-  isGroup: true
 - name: az disk
   description: Manage Azure Managed Disks.
   href: disk
@@ -68,6 +64,10 @@ commandList:
 - name: az find
   description: Find Azure CLI commands based on a given query.
   href: '#find'
+- name: az functionapp
+  description: Manage your function app.
+  href: functionapp
+  isGroup: true
 - name: az group
   description: Manage resource groups and template deployments.
   href: group
