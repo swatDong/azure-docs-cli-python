@@ -1,21 +1,21 @@
 commandList:
-- name: az monitor metric-definitions list
-  description: Commands to manage metric definitions.
-  href: metric-definitions#list
-htmlId: metric-definitions
+- name: az postgres db list
+  description: List the databases of an Azure Database for PostgreSQL server.
+  href: db#list
+htmlId: db
 examples: []
 children:
 - commandList: []
   htmlId: list
   examples: []
   parameters:
-  - name: --resource-id
+  - name: --resource-group -g
     isRequired: True
-    summary: The identifier of the resource.
+    summary: Name of resource group. You can configure the default group using az configure --defaults group=<name>.
     description: ''
-  - name: --metric-names
-    isRequired: False
-    summary: The list of metric names.
+  - name: --server-name -s
+    isRequired: True
+    summary: The name of the server.
     description: ''
   - name: --debug
     isRequired: False
@@ -40,13 +40,13 @@ children:
     summary: Increase logging verbosity. Use --debug for full debug logs.
     description: ''
   children: []
-  uid: az_monitor_metric-definitions_list
-  name: az monitor metric-definitions list
+  uid: az_postgres_db_list
+  name: az postgres db list
   description: ''
-  summary: Commands to manage metric definitions.
+  summary: List the databases of an Azure Database for PostgreSQL server.
   Metadata: {}
-uid: az_monitor_metric-definitions
-name: 'Monitoring  - az monitor metric-definitions'
+uid: az_postgres_db
+name: 'Azure Database for PostgreSQL databases - az postgres db'
 description: ''
-summary: Commands to manage metric definitions.
+summary: Commands to manage Azure Database for PostgreSQL databases.
 Metadata: {}
